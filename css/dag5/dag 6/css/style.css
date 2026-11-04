@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#ededed;
+}
+
+#mypopover{
+    border: none;
+    padding: 20px;
+    max-width: 250px;
+}
+
+button.icon{
+background: none;
+border: none;
+cursor: pointer;
+position: absolute;
+top:16px;
+right:16px;
+}
+
+#mypopover::backdrop {
+    background-color: #f967dc;
+}
+
+#mypopover h3{
+    margin: 0 0 10px 0;
+}
+
+#mypopover p{
+    color: #565656;
+}
+
+#mypopover button.primary {
+    width: 100%;
+}
+
+button.primary {
+    background-color: #752c66; 
+    padding: 10px 20px;
+    border-radius: none;
+    color: #ededed;
+    transition: 0.3s;
+}
+
+button.primary:hover{
+    background-color: #f798e4;
+}

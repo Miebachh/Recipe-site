@@ -1,0 +1,1330 @@
+/* Home site*/
+
+:root {
+    --width-full: 100%;
+    --width-12col: 1200px;
+
+
+    /*grid setting*/
+
+    --grid-gap: 10px;
+    --padding-default: 20px;
+
+    /*colours*/
+
+    --background-color-navigation: #00000088;
+    --background-color-light: #ededed;
+    --background-color-dark-bg: #111111;
+    --primary-color: #bf5b23;
+    --color-white: #ffffff;
+    --color-dark: #373737;
+    --color-light: #ebebeb;
+
+    /*color swatch categories */
+
+    --category-seafood: #3e30e2;
+    --category-chicken: #249c8e;
+    --category-meat: #d09189;
+    --category-vegetarian: #298f3f;
+    --category-snacks: #9a951e;
+    --category-pasta: #bf5b23;
+    --category-desserts: #9374eb;
+
+}
+
+/* data-category attributes */
+div[data-category="Seafood"] {
+    border-left: 1px solid var(--category-seafood);
+}
+
+p[data-category="Seafood"] {
+    color: var(--category-seafood);
+}
+
+span[data-category="Seafood"] {
+    color: var(--category-seafood);
+}
+
+div[data-category="vegetarian"] {
+    border-left: 1px solid var(--category-vegetarian);
+}
+
+p[data-category="vegetarian"] {
+    color: var(--category-vegetarian);
+}
+
+span[data-category="vegetarian"] {
+    color: var(--category-vegetarian);
+}
+
+div[data-category="chicken"] {
+    border-left: 1px solid var(--category-chicken);
+}
+
+p[data-category="chicken"] {
+    color: var(--category-chicken);
+}
+
+span[data-category="chicken"] {
+    color: var(--category-chicken);
+}
+
+div[data-category="pasta"] {
+    border-left: 1px solid var(--category-pasta);
+}
+
+p[data-category="pasta"] {
+    color: var(--category-pasta);
+}
+
+span[data-category="pasta"] {
+    color: var(--category-pasta);
+}
+
+div[data-category="snacks"] {
+    border-left: 1px solid var(--category-snacks);
+}
+
+p[data-category="snacks"] {
+    color: var(--category-snacks);
+}
+
+span[data-category="snacks"] {
+    color: var(--category-snacks);
+}
+
+div[data-category="meat"] {
+    border-left: 1px solid var(--category-meat);
+}
+
+p[data-category="meat"] {
+    color: var(--category-meat);
+}
+
+span[data-category="meat"] {
+    color: var(--category-meat);
+}
+
+div[data-category="desserts"] {
+    border-left: 1px solid var(--category-desserts);
+}
+
+p[data-category="desserts"] {
+    color: var(--category-desserts);
+}
+
+span[data-category="desserts"] {
+    color: var(--category-desserts);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: var(--width-full);
+    font-family: "Roboto", sans-serif;
+    height: 100%;
+    position: relative;
+    background-color: var(--background-color-dark-bg);
+
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--grid-gap);
+    width: var(--width-full);
+}
+
+
+.navigation,
+.hero,
+.image_section,
+.footer {
+    width: var(--width-full)
+        /* den har fuld vidde */
+}
+
+.todays_recipes,
+.categories,
+.content_area {
+    width: var(--width-12col);
+    margin: 0 auto 0 auto;
+}
+
+.hamburger-menu{
+    display: none;
+    color:var(--background-color-light);
+    font-size: 24px;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+
+.navigation {
+    width: var(--width-full);
+    height: 80px;
+    background-color: var(--background-color-navigation);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+/* For cool floaty later JS */
+.navigation.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu-container {
+    width: var(--width-12col);
+}
+
+.menu-container ul {
+    display: flex;
+}
+
+.menu-container ul li {
+    list-style: none;
+
+}
+
+.menu-container a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: var(--background-color-light);
+    border-right: 1px solid var(--background-color-light);
+}
+
+.menu-container a:hover {
+    color: var(--primary-color);
+}
+
+.menu-container li:last-child a {
+    border-right: none;
+}
+
+/* Hero section*/
+.hero {
+    display: flex;
+    justify-content: center;
+    color: var(--background-color-light);
+    position: relative;
+    width: var(--width-full);
+    top: 0;
+    min-height: 600px;
+    height: auto;
+    margin: 0;
+    background-image: url("https://picsum.photos/1920/800");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero-container {
+    width: var(--width-12col);
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: var(--grid-gap);
+}
+
+.hero-text {
+    grid-column: 1/span 4;
+    /* spanning over 4 colums*/
+    grid-row: 1;
+    margin-top: 200px;
+}
+
+.hero-text h4,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+.hero-text h4 {
+    font-weight: 400;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+.hero-text h6 {
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.hero-search {
+    grid-column: 2/span 3;
+    grid-row: 2;
+    margin-top: 50px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px 20px 10px 40px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid var(--background-color-light);
+    outline: none;
+    color: var(--background-color-light);
+}
+
+.search-input::placeholder {
+    color: var(--background-color-light);
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Todays recipes stuff start*/
+.todays_recipes {
+    height: fit-content;
+    width: var(--width-12col);
+    display: grid;
+    grid-template-rows: 130px auto;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap);
+}
+
+.todays_recipes_content_block_image img {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.todays_recipes_headline {
+    height: 60px;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-white);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+.todays_recipes_content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--grid-gap);
+    height: fit-content;
+    width: var(--width-12col);
+}
+
+.todays_recipes_content_block {
+    background-color: var(--background-color-light);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.todays_recipes_content_block_text {
+    padding: 20px;
+    color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.todays_recipes_content_block_text_top h5 {
+    font-weight: 700px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.todays_recipes_content_block_text p {
+    font-size: 16px;
+}
+
+.todays_recipes_content_bottom_area {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+}
+
+.todays_recipes_content_bottom_area_left {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 10px;
+    flex-direction: column;
+}
+
+.todays_recipes_content_bottom_area_left p {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.todays_recipes_content_bottom_area_right button {
+    background-color: var(--color-dark);
+    border: 1px solid var(--background-color-light);
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.todays_recipes_content_bottom_area_right button a {
+    color: var(--color-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.todays_recipes_content_bottom_area_right button a:hover {
+    color: var(--primary-color);
+}
+
+.categories {
+    width: var(--width-12col);
+}
+
+.categories_content {
+    display: flex;
+    background-color: var(--background-color-light);
+    gap: var(--grid-gap);
+    padding: 20px 0;
+    border-radius: 5px;
+    margin: 10px auto;
+    justify-content: space-evenly;
+}
+
+.categories_content_block{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    flex-direction: column;
+}
+
+.categories_content_block svg {
+    font-size: 40px;
+}
+
+/*image section start*/
+.image_section{
+    width:var(--width-full);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    background-image: url("https://picsum.photos/1920/400");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0% 100%); 
+}
+
+.image_section_controller{
+    width: var(--width-12col);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px auto 50px;
+}
+
+.image_section_box{
+    grid-row:2;
+    background-color: var(--background-color-light);
+    grid-column: 9/ span 4;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.image_section h4{
+    color:var(--primary-color);
+    text-transform: uppercase;
+    font-size: 16 px;
+    font-weight: 700;
+    padding: 0 0 10px 0;
+    padding-left: 12px;
+}
+
+.image_section p{
+    font-size: 15px;
+    color: var(--color-dark);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Hele sidens indhold */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto 100px;
+}
+
+/* Overskrift */
+h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+/* Grid med to kolonner */
+.kitchen-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Tekstbokse */
+.text-box {
+    background-color: #ebebeb;
+    min-height: 355px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.content {
+    width: 100%;
+    max-width: 350px;
+}
+
+.image_section_box h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    border-left: 2px solid #c85a20; 
+    padding-left: 8px;
+}
+
+h2 {
+    color: #c85a20;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.2;
+  /*   margin-bottom: 40px; */
+}
+
+/* Knapper */
+.button {
+    display: inline-block;
+    background-color: #383838;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 30px;
+    min-width: 165px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 3px #999;
+}
+
+.button:hover {
+    background-color: #c85a20;
+}
+
+/* Billeder */
+.image-box {
+    height: 355px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobilvisning */
+@media (max-width: 700px) {
+    .kitchen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .text-box {
+        min-height: 300px;
+        padding: 30px;
+    }
+
+    .image-box {
+        height: 250px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #c75d24;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 6%;
+    min-height: 155px;
+    font-family: Arial, sans-serif;
+}
+
+/* Sociale medier */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-social a {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-social i {
+    font-size: 20px;
+    width: 30px;
+}
+
+/* Menu */
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-menu a {
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Lodret streg */
+.footer-line {
+    width: 2px;
+    height: 75px;
+    background-color: #f4c6a5;
+}
+
+/* Højre side */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+/* Spotify links */
+.spotify {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.spotify a {
+    color: white;
+    font-size: 11px;
+    text-decoration: underline;
+}
+
+/* Miljøtekst */
+.eco {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.eco i {
+    font-size: 23px;
+    color: #333;
+}
+
+.eco p {
+    font-size: 11px;
+    color: #222;
+    text-align: right;
+    margin: 0;
+}
+
+/* Hover-effekt */
+.footer a:hover {
+    color: white;
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+    .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .footer-line {
+        display: none;
+    }
+
+    .footer-right {
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .spotify {
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .spotify a {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* RWD start */
+@media (width <= 768px) {
+    :root{
+        --width-12col:100%;
+    }
+    
+    body{
+    
+    }
+
+    .menu-container{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block;
+    }
+
+    .mobile-menu{
+        position: fixed;
+        top:0;
+        right:0;
+        height: 100%;
+        background-color: var(--color-dark);
+        box-shadow: -2px 0 5px #00000080; 
+        transform: translateX(100%);
+        z-index: 1000;
+        display: block;
+        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    }
+
+    .mobile-menu.open{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+    }
+
+    .mobile-menu ul{
+        padding: 0;
+    }
+
+    .mobile-menu ul li {
+        list-style: none;
+        text-decoration: none;
+        padding: 15px;
+    }
+
+    .mobile-menu ul li a {
+        color: var(--background-color-light);
+        text-decoration: none;
+    }
+
+    .mobile-menu .menu-item {
+        display: block;
+        padding: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .todays_recipes{
+        width: 90%;
+    }
+
+    .todays_recipes_content{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .todays_recipes_content_block_image img{
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .categories_content{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .categories_content_block{
+        width:45%;
+        margin:5px;
+    }
+
+    .image_section {
+        display:none;
+    }
+
+    .image-box {
+        display: none;
+    }
+
+ .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 35px 20px;
+        text-align: center;
+    }
+
+    /* Sociale medier */
+    .footer-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .footer-social a {
+        font-size: 0;
+    }
+
+    .footer-social i {
+        font-size: 26px;
+        width: auto;
+    }
+
+    /* Menu */
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-menu a {
+        font-size: 14px;
+    }
+
+    /* Spotify og højre side */
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Streg */
+    .footer-line {
+        width: 80%;
+        height: 1px;
+        background-color: #a94d1e;
+    }
+
+.kitchen-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .text-box {
+        width: 100%;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .image-box img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* HERO - MOBILVISNING */
+
+.hero {
+    min-height: 550px;
+    height: auto;
+    padding: 40px 20px;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: auto;
+    gap: 25px;
+}
+
+.hero-text {
+    width: 100%;
+    margin-top: 0;
+
+    text-align: center;
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.hero-text h4 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero-text h6 {
+    font-size: 14px;
+}
+
+/* SØGEFELT */
+
+.hero-search {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 20px;
+
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.search-box {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 15px 12px 45px;
+}
+
+.hero-text {
+    border-left: none;
+}
+
+.hero-text h4,
+.hero-text h6 {
+    border-left: none;
+}
+}
+
+/* SEARCH PAGE */
+
+.search-page {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* MENU */
+
+.search-page .search-nav {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    font-size: 18px;
+    justify-content: flex-start;
+}
+
+.search-page .search-nav a {
+    color: white;
+    text-decoration: none;
+}
+.search-page .search-nav a:hover {
+    color: #cf5d22;
+}
+
+.search-page .search-nav .active {
+    color: #cf5d22;
+}
+
+/* CONTAINER */
+
+.search-container {
+    max-width: 1100px;
+    margin: 70px auto;
+    padding: 0 20px;
+}
+
+/* SØGNING OG FILTER */
+
+.search-top {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 100px;
+    align-items: start;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #333;
+}
+
+.search-left h1 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 12px;
+}
+
+.search-field span {
+    font-size: 25px;
+}
+
+.search-field input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    width: 100%;
+}
+
+.search-field input::placeholder {
+    color: white;
+}
+
+.search-left p {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* FILTER */
+
+.search-filter {
+    background: linear-gradient(120deg, #292929, #111);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.search-filter h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 30px;
+}
+
+.filter-grid label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.filter-grid input {
+    width: 22px;
+    height: 22px;
+    accent-color: #cf5d22;
+}
+
+/* RESULTATER */
+
+.search-results {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.result {
+    padding: 10px 0 45px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+}
+
+.result .category {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    padding-left: 8px;
+}
+
+.purple {
+    border-left: 3px solid #6556f6;
+}
+
+.purple span {
+    color: #6556f6;
+}
+
+.turquoise {
+    border-left: 3px solid #20b9ad;
+}
+
+.turquoise span {
+    color: #20b9ad;
+}
+
+.result h2 {
+    font-size: 20px;
+    color: #cf5d22;
+    margin-bottom: 12px;
+}
+
+.result > p:not(.category) {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ABOUT SIDE */
+
+.about-page {
+    margin: 0;
+    background-color: #141414;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* MENU */
+
+.about-page .menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 45px 6%;
+}
+
+.about-page .menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+/* LODRET STREG MELLEM MENUPUNKTER */
+
+.about-page .menu a:not(:last-child)::after {
+    content: "|";
+    color: white;
+    margin-left: 12px;
+}
+
+/* ORANGE VED HOVER */
+
+.about-page .menu a:hover {
+    color: #f28c28;
+}
+
+/* AKTIV SIDE */
+
+.about-page .menu a.active {
+    color: white;
+}
+
+/* INDHOLD */
+
+.about-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto 30px;
+}
+
+/* OVERSKRIFT */
+
+.about-container h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #aaa;
+}
+
+/* RÆKKER MED TEKST OG BILLEDER */
+
+.about-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 45px;
+    align-items: stretch;
+}
+
+/* HVIDE TEKSTBOKSE */
+
+.about-text {
+    background-color: #fff;
+    color: black;
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-text h2 {
+    font-size: 21px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+/* BILLEDER PÅ ABOUT SIDEN */
+
+.about-page .about-row img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
+/* NYHEDSBREV */
+
+.about-page .about-newsletter {
+    background-color: #141414;
+    padding: 120px 20px 100px;
+    color: white;
+}
+
+.about-page .newsletter-content {
+    max-width: 510px;
+    margin: 0 auto;
+}
+
+/* SOCIALE MEDIER */
+
+.about-page .newsletter-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin-bottom: 30px;
+}
+
+.about-page .newsletter-socials a {
+    color: #f27c00;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+.about-page .newsletter-socials a:hover {
+    color: white;
+}
+
+/* OVERSKRIFT */
+
+.about-page .newsletter-content h2 {
+    text-align: center;
+    font-size: 17px;
+    font-weight: normal;
+    margin-bottom: 35px;
+     color: white;
+}
+
+/* ORANGE TEKST */
+
+.about-page .newsletter-content p {
+    color: #f27c00;
+    font-size: 14px;
+    line-height: 1.25;
+    margin-bottom: 35px;
+}
+
+/* FORMULAR */
+
+.about-page .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.about-page .newsletter-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 12px;
+    background-color: #d9d9d9;
+    border: none;
+    font-size: 14px;
+    height: 57px;
+}
+
+.about-page .newsletter-form button {
+    background-color: #f27c00;
+    color: white;
+    border: none;
+    height: 57px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.about-page .newsletter-form button:hover {
+    background-color: #d96e00;
+}
+
+/* ORANGE FOOTER */
+
+.about-page .about-footer {
+    background-color: #f27c00;
+    width: 100%;
+}
