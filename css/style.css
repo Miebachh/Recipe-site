@@ -248,6 +248,7 @@ body {
     /* spanning over 4 colums*/
     grid-row: 1;
     margin-top: 200px;
+    margin-left: 100px;
 }
 
 .hero-text h4,
@@ -726,10 +727,6 @@ p {
 @media (width <= 768px) {
     :root{
         --width-12col:100%;
-    }
-    
-    body{
-    
     }
 
     .menu-container{
@@ -1327,4 +1324,277 @@ p {
 .about-page .about-footer {
     background-color: #f27c00;
     width: 100%;
+}
+
+
+/* MENU */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 0;
+    margin-left: 120px;
+}
+
+/* MENUPUNKTER */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+/* STREGER MELLEM MENUPUNKTER */
+.navbar span {
+    color: white;
+    font-size: 18px;
+}
+
+/* ORANGE FARVE VED HOVER */
+.navbar a:hover {
+    color: #e87518;
+}
+
+
+/* OPSKRIFTSSIDE */
+.recipe-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 60px 80px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* ØVERSTE SEKTION */
+.recipe-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* LILLE ORANGE TEKST */
+.recipe-label {
+    color: #e87518;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+/* OVERSKRIFT */
+.recipe-content h1 {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.recipe-content h1 strong {
+    font-weight: 700;
+}
+
+/* TID, KALORIER OG NIVEAU */
+.recipe-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 60px;
+    margin-bottom: 45px;
+    font-size: 14px;
+}
+
+.recipe-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.recipe-info span {
+    color: #e87518;
+    font-size: 22px;
+}
+
+/* INGREDIENSER */
+.recipe-content h3 {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.ingredients {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.ingredients ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+.ingredients li {
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* KNAPPER */
+.recipe-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.recipe-buttons button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.recipe-buttons button:hover {
+    color: #e87518;
+    border-color: #e87518;
+}
+
+/* BILLEDE AF SUPPEN */
+.recipe-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0%;
+}
+
+/* INSTRUCTIONS */
+.instructions {
+    margin-top: 60px;
+}
+
+.instructions h2 {
+    font-size: 32px;
+    border-bottom: 1px solid #888;
+    padding-bottom: 8px;
+    margin-bottom: 35px;
+}
+
+.instructions ol {
+    max-width: 750px;
+    padding-left: 15px;
+}
+
+.instructions li {
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+.recipe-content h1 {
+    border-bottom: none;
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: #c65a24;
+    color: #111;
+    width: 100%;
+    padding: 45px 60px;
+    box-sizing: border-box;
+}
+
+/* FOOTER LAYOUT */
+.footer-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 2px 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+/* LINKS */
+.footer a {
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* SOCIALE MEDIER */
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    transform: none;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-social i {
+    font-size: 20px;
+    width: 22px;
+}
+
+/* MENU */
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* LODRET STREG */
+.footer-line {
+    width: 2px;
+    height: 80px;
+    background-color: white;
+}
+
+/* HØJRE SIDE */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 35px;
+}
+
+/* SPOTIFY */
+.spotify {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.spotify a {
+    color: white;
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+/* MILJØTEKST */
+.eco {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.eco i {
+    font-size: 28px;
+}
+
+.eco p {
+    font-size: 12px;
+    text-align: right;
+    margin: 0;
 }
