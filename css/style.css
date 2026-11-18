@@ -1598,3 +1598,100 @@ p {
     text-align: right;
     margin: 0;
 }
+@media screen and (max-width: 768px) {
+
+    .footer {
+        padding: 35px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Sociale medier */
+    .footer-social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .footer-social a {
+        font-size: 0;
+        gap: 0;
+    }
+
+    .footer-social i {
+        font-size: 25px;
+        width: auto;
+    }
+
+    /* Menu */
+    .footer-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .footer-menu a {
+        font-size: 13px;
+    }
+
+    /* Streg */
+    .footer-line {
+        width: 80%;
+        height: 1px;
+        background-color: #f4c6a5;
+    }
+
+    /* Højre side */
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Spotify */
+    .spotify {
+        align-items: center;
+    }
+
+    /* Miljøtekst */
+    .eco {
+        justify-content: center;
+    }
+
+    .eco p {
+        text-align: left;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    /* Skjul billeder på About Us */
+    .about-page .about-row > img {
+        display: none;
+    }
+
+    /* Vis kun tekstboksene */
+    .about-page .about-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .about-page .about-text {
+        width: 100%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+}
